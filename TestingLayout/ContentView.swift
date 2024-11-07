@@ -12,7 +12,6 @@ struct ContentView: View {
         ZStack {
             BackgroundView(imageName: "homeBackground")
             VStack {
-              //  Spacer()
                 Image(systemName: "star.fill")
                     .resizable()
                     .frame(width: 80, height: 80)
@@ -20,22 +19,12 @@ struct ContentView: View {
                     .padding(.top, 20)
                 Spacer()
                 VStack(spacing: 32) {
-                    Text("Hello, world!")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .bold()
-                    Text("Hello, world!")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .bold()
-                    Text("Hello, world!")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .bold()
-                    Text("Hello, world!")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .bold()
+                    ForEach(0..<4) { i in
+                        Text("Hello, world!")
+                            .foregroundStyle(.white)
+                            .font(.largeTitle)
+                            .bold()
+                    }
                 }
                 Spacer()
             }
